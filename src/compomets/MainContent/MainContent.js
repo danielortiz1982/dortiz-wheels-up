@@ -11,16 +11,18 @@ class MainContent extends Component{
     }
     async componentDidMount(){
 
+        let endpoint = `http://localhost:3500`
+
         // init empty array
         let inv = []
 
         // API call to return all Car Makes
-        let carMakes        = await fetch('http://localhost:3500/CarMakes')
+        let carMakes        = await fetch(`${endpoint}/CarMakes`)
         let carMakesJSON    = await carMakes.json()
         let carMakesData    = carMakesJSON
 
         // API call to return all inventory
-        let inventory       = await fetch('http://localhost:3500/inventory')
+        let inventory       = await fetch(`${endpoint}/inventory`)
         let inventoryJSON   = await inventory.json()
         let inventoryData   = inventoryJSON
 

@@ -3,7 +3,6 @@ import './inventory-details.sass'
 
 class InventoryDetails extends Component{
     render(){
-        console.log(this.props.details)
         return this.props.details.map( element => (
             <div className="inv-list" key={element.itemId}>
                 {element.car.map(car => (
